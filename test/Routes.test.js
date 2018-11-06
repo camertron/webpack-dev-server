@@ -55,6 +55,11 @@ describe('Routes', () => {
       req.get('/bundle')
         .expect(200, magicHtml.trim(), done);
     });
+
+    it('GET request to invalidate endpoint', (done) => {
+      req.get('/invalidate')
+        .expect(200, 'Ok', done);
+    });
   });
 
   describe('headers as a string', () => {
